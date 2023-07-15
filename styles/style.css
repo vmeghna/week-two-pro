@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-light-blue: #add8e6;
+  --clr--green: #008000;
+  --clr--road: rgb(77, 76, 76);
+  --clr--white: #ffffff;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.sky {
+  background-color: var(--clr-light-blue);
+  height: 37vh;
+  position: relative;
+}
+/*The animation is created by gradually changing from one set of CSS styles to another.*/
+/*control the appearances*/
+@keyframes drive {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1600px);
+  }
+}
+/*keyframe-It gives you more control over the animation you want to perform. */
+@keyframes jump {
+  0% {
+    top: -35%;
+  }
+  40% {
+    top: -65%;
+  }
+  100% {
+    top: -35%;
+  }
+}
+.cloud-one {
+  position: absolute;
+  left: 70px;
+  top: 10px;
+  animation: drive 80s linear infinite;
+}
+.cloud-two {
+  opacity: 0.5;
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  animation: drive 50s linear infinite;
+}
+.grass {
+  position: relative;
+  height: 30vh;
+  background-color: var(--clr--green);
+  box-shadow: 0 -10px 5px green;
+}
+.road {
+  position: relative;
+  background-color: var(--clr--road);
+  height: 38vh;
+}
+.mario {
+  position: absolute;
+  animation: drive 4s ease-in infinite forwards, jump 0.4s 2s;
+  top: -30%;
+}
+.luigi {
+  position: absolute;
+  top: -20%;
+  animation: drive 4.2s ease-in infinite forwards;
+}
+.lines {
+  position: relative;
+  border-top: 20px dashed white;
+  bottom: -50%;
+  width: 100vw;
+}
