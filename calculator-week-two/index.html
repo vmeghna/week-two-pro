@@ -20,53 +20,56 @@
   <body>
     <!--start-->
     <div class="main">
-      <div class="inputs"></div>
+      <div class="inputs">
+        <input id="display" class="input" readonly />
+      </div>
       <div class="operators">
-        <button class="add">+</button>
+        <button class="add" onclick="buttonClick('+')">+</button>
         <!--sub-->
-        <button class="sub">-</button>
+        <button class="sub" onclick="buttonClick('-')">-</button>
         <!--multiply-->
-        <button class="multiply">&times;</button>
+        <button class="multiply" onclick="buttonClick('*')">&times;</button>
         <!--division-->
-        <button class="division">&divide;</button>
+        <button class="division" onclick="buttonClick('/')">&divide;</button>
       </div>
       <!--numbers-->
       <div class="left ctn">
         <div class="numbers">
-          <button class="one" value="7">7</button>
+          <button class="one" onclick="buttonClick('7')">7</button>
           <!--2-->
-          <button class="two" value="8">8</button>
+          <button class="two" onclick="buttonClick('8')">8</button>
           <!--3-->
-          <button class="three" value="9">9</button>
+          <button class="three" onclick="buttonClick('9')">9</button>
         </div>
         <!--4-->
         <div class="numbers">
-          <button class="four" value="4">4</button>
+          <button class="four" onclick="buttonClick('4')">4</button>
           <!--5-->
-          <button class="five" value="5">5</button>
+          <button class="five" onclick="buttonClick('5')">5</button>
           <!--6-->
-          <button class="six" value="6">6</button>
+          <button class="six" onclick="buttonClick('6')">6</button>
         </div>
         <!--7-->
         <div class="numbers">
-          <button class="seven" value="1">1</button>
+          <button class="seven" onclick="buttonClick('1')">1</button>
           <!--8-->
-          <button class="eight" value="2">2</button>
+          <button class="eight" onclick="buttonClick('2')">2</button>
           <!--9-->
-          <button class="nine" value="3">3</button>
+          <button class="nine" onclick="buttonClick('3')">3</button>
         </div>
         <!--0-->
         <div class="numbers">
-          <button class="zero" value="0">0</button>
+          <button class="zero" onclick="buttonClick('0')">0</button>
           <!--.-->
-          <button class="dot" value=".">.</button>
+          <button class="dot" onclick="buttonClick('.')" value=".">.</button>
           <!--c-->
-          <button class="clear" value="C">C</button>
+          <button class="clear" onclick="clearDisplay()">C</button>
         </div>
       </div>
       <div class="right-ctn">
-        <button class="equal" value="=">=</button>
+        <button class="equal" onclick="calculate()">=</button>
       </div>
     </div>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
